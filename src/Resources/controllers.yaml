@@ -1,0 +1,17 @@
+parameters:
+    lsv_vertification.controller.class: Lsv\Vertification\Controller\DefaultController
+    lsv_vertification.controller.alreadyvalidated_routename:
+    lsv_vertification.controller.awaitingvalidation_routename:
+    lsv_vertification.controller.responsevalidated_routename:
+    lsv_vertification.controller.options:
+
+services:
+    Lsv\Vertification\Controller\DefaultController:
+        autoconfigure: true
+        autowire: true
+        arguments:
+            $alreadyValidatedRouteName: '%lsv_vertification.controller.alreadyvalidated_routename%'
+            $awaitingValidationRouteName: '%lsv_vertification.controller.awaitingvalidation_routename%'
+            $responseValidatedRouteName: '%lsv_vertification.controller.responsevalidated_routename%'
+            $options: '%lsv_vertification.controller.options%'
+

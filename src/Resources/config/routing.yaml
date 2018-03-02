@@ -1,0 +1,7 @@
+lsv_vertification_request:
+    path: /{type}
+    controller: Lsv\Vertification\Controller\DefaultController:request
+
+lsv_vertification_response:
+    path: /{type}/response
+    controller: Lsv\Vertification\Controller\DefaultController:response
